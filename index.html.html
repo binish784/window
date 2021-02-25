@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+#screen{
+	height:600px;
+	width: 1200px;
+	background-color: grey;
+	margin-top: 25px;
+	margin-left: 50px;
+}
+
+#welcome{
+	height: 600px;
+	width: 1200px;
+	position: absolute;
+}
+
+#loadingScreen{
+	height: 600px;
+	width: 1200px;
+	display: block;
+	background-color: black;
+	animation:none;
+	position: absolute;
+}
+
+#loadingImage{
+	margin-left: 475px;
+	margin-top: 120px;
+}
+
+@keyframes blurOut{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+#glitchScreen{
+	position: absolute;
+	height:600px;
+	width: 1200px;
+	z-index: 1;
+	display: none;
+}
+
+#skullGlitch{
+	position: absolute;
+	height:600px;
+	width: 1200px;
+	z-index: 1;	
+}
+
+#duckyIcon{
+	height:50px;
+	width: 73px;
+	border:white 2px solid;
+	border-radius: 10px;
+	position: absolute; 
+	float: left;
+}
+
+#rootUser{
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	font-family: monospace;
+	margin-left: 90px;
+	float: left;
+}
+
+#rootSection{
+	position: absolute;
+	height: 55px;
+	width: 200px;
+	margin-top: 221px;
+	margin-left: 663px;
+	float: left;
+	padding: 5px;
+}
+
+#rootSection:hover{
+	border:blue 2px solid;
+}
+
+#guestSection{
+	position: absolute;
+	height: 55px;
+	width: 200px;
+	margin-top: 300px;
+	margin-left: 663px;
+	float: left;
+	padding: 5px;
+}
+
+
+#guestIcon{
+	height:50px;
+	width: 73px;
+	border:white 2px solid;
+	border-radius: 10px;
+	position: absolute; 
+	float: left;
+}
+
+#guestUser{
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	font-family: monospace;
+	margin-left: 90px;
+	float: left;
+}
+
+#guestSection:hover{
+	border:blue 2px solid;
+}
+
+@keyframes blurIn{
+	0%{
+		opacity: 0;
+	}
+	1%{
+		opacity: 1;
+	}
+}
+
+#shutdownSection{
+	height: 28px;
+	width: 39px;
+	background-color: maroon;
+	position: absolute;
+	margin-top: 523px;
+	margin-left: 35px;
+}
+
+
+#shutdownIcon{
+	height: 28px;
+	width: 39px;
+	border:#2332a7 3px outset;
+}
+
+</style>
+
+</head>
+
+<body onload="loadingSession()">
+
+<div id="screen">
+
+<div id="welcomeScreen">
+	<img id="welcome" src="welcome.jpg">
+
+	<a id="rootSection" href="./screen.html">
+	<p id="rootUser">R o o t</p>
+	<img id="duckyIcon" src="ducky.jpg">
+	</a>
+
+	<div id="guestSection">
+	<p id="guestUser">G u e s t</p>
+	<img src="guest.jpg" id="guestIcon">
+	</div>
+
+	<div id="shutdownSection">
+		<img src="shutdownButton.jpg" id="shutdownIcon" onmouseover="changeRed()" onmouseout="changeBack()" onclick="ClickedShut()" onmousedown="leaveClick()">
+	</div>
+</div>
+
+	<div id="glitchScreen">
+			<img src="skullGlitch.gif" id="skullGlitch">
+	</div>
+	
+	<div id="loadingScreen">
+		<img src="loading.gif" id="loadingImage">
+	</div>
+	
+
+
+</div>
+
+<script type="text/javascript">
+
+function leaveClick(){
+	document.getElementById("shutdownIcon").style.border="#2332a7 3px inset";	
+}
+
+function changeBack(){
+	document.getElementById("shutdownIcon").src="shutdownButton.jpg";
+}
+
+function ClickedShut(){
+	document.getElementById("shutdownIcon").style.border="#2332a7 3px outset";
+}
+
+function changeRed(){
+	document.getElementById("shutdownIcon").src="shutdown-hover.jpg";
+}
+
+function selected(){
+	document.getElementById("userData").style.border="white 2px solid";
+}
+	
+function loadingSession(){
+	setTimeout(function(){
+			document.getElementById("loadingScreen").style.animation="blurOut 3s 1";
+	},5000);//3000
+	setTimeout(function(){
+		document.getElementById("loadingScreen").style.display="none";	
+	},5000);//6000
+	setTimeout(function(){
+		glitch();
+	},5000);//6000
+}
+
+
+function glitch(){
+	document.getElementById("glitchScreen").style.display="block";
+	setTimeout(function(){
+		document.getElementById("glitchScreen").style.display="none";
+	},300);
+}
+
+
+
+</script>
+
+</body>
+</html>

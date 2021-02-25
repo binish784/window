@@ -1,0 +1,255 @@
+#screen{
+	height: 600px;
+	width:1200px;
+	background-image:url("back.jpg");
+	background-repeat: none;
+	margin:0px auto;
+	padding: none;
+}
+
+#loadingScreen{
+	height: 629px;
+	width: 1200px;
+	position: absolute;
+	background-color: black;
+	display: none;
+}
+
+#bottom-bar{
+	height:29px;
+	width:1200px;
+	margin-top: 571px;
+	background-image: url("menu-bar.png");
+	position: absolute;
+}
+
+#start-menu{
+	display: none;
+	height:400px;
+	width: 250px;
+	margin-top: 166px;
+	background-color: #d3e5fb;
+	position: absolute;
+	border: dodgerblue 2px solid;
+	font-family: sans-serif;
+	}
+
+#start-button{
+	height: 29px;
+	width: 98px;
+	background-image:url("start-button.png");
+}
+
+#start-menu ul {
+	list-style-type: none;
+}
+
+#start-menu ul a{
+	text-decoration: none;
+	color:#0e245d;
+}
+#start-menu ul a li{
+	padding: 10px;
+	display: block;
+}
+
+#start-menu ul a li:hover{
+	background-color: grey;
+	color: yellow;
+
+}
+
+#text-editor{
+	height:475px;
+	width:600px;
+	position: absolute;
+	font-size: 15px;
+}
+
+#text-edit{
+	height: 500px;
+	width: 600px;
+	position: absolute;
+	margin-left: 300px;
+	margin-top:20px;
+	background-color: grey;
+	display: none;
+	border: navy 2px solid;
+}
+
+#gallery{
+	height:500px;
+	width: 900px;
+	position: absolute;
+	margin-left: 90px;
+	margin-top: 40px;
+	display: none;
+}
+
+#text-editor-top{
+	height: 25px;
+	width: 600px;
+	background-image: url("top-bar.jpg");
+}
+
+#close-text-editor{
+	height: 25px;
+	width:25px;
+	float: right;
+	background-image: url("close-buttton.jpg");
+}
+
+body{
+background-color: #352f2f;
+}
+
+#gallery-top{
+	height:25px;
+	width: 900px;
+	background-color: #a7a7a7;
+}
+
+#gallery-content{
+	height:475px;
+	width: 900px;
+	background-color: #6d6c6c;
+	position: absolute;
+}
+
+#sub-images{
+	height: 400px;
+	width: 900px;
+}
+
+#hide-gallery{
+	height: 25px;
+	width: 25px;
+	background-color: teal;
+	float: right;
+}
+
+#start-bottom{
+	width: 250px;
+	height: 40px;
+	background-image: url("start-bottom.jpg");
+	margin-top: 158px;
+	position: absolute;
+}
+
+#start-top{
+	height: 64px;
+	width: 250px;
+	background-image: url("start-top.jpg");
+}
+
+.galimg{
+	height: 60px;
+	width: 100px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+#images{
+	height: 80px;
+	width: 900px;
+	background-color: grey;
+}
+
+.large-image{
+	height: 300px;
+	width:600px;
+	margin-left: 30px;
+	margin-top: 30px;
+	border: black 2px solid;
+	float: left;
+}
+
+
+#image1{
+	display: none;
+}
+}
+#image2{
+	display: none;
+}
+#image3{
+	display: none;
+}
+#image4{
+	display: none;
+}
+#image5{
+	display: none;
+}
+#image6{
+	display: none;
+}
+#image7{
+	display: none;
+}
+
+
+#calc{
+	height:350px;
+	width: 250px;
+	background-color: silver;
+	margin-top: 50px;
+	position: absolute;
+	margin-left: 250px;
+	display: none;
+	border: dimgrey 2px outset;
+}
+
+#displayBoard{
+	height:80px;
+	width: 240px;
+	margin-top: 20px;
+	padding: 5px;
+	font-size: 25px;
+	font-family: sans-serif;
+	border: black thin outset;
+}
+
+#numPad{
+	height:180px;
+	width: 150px;
+	background-color: grey;
+	margin-top: 20px;
+	float: left;
+}
+
+#actionPad{
+	height: 180px;
+	width: 95px;
+	background-color: dimgrey;
+	margin-top: 20px;
+	float: left;
+	margin-left: 5px;
+}
+
+#closeCalc{
+	height: 20px;
+	width: 20px;
+	background-color: olive;
+	float: right;
+}
+
+.numButt{
+	height: 35px;
+	width: 35px;
+	margin: 5px;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+.dobButt{
+	height: 32px;
+	width:85px;
+	margin: 5px;
+	font-size: 17px;
+	font-family: sans-serif;
+}
+
+#eq_Num{
+	background-color: lime;
+}

@@ -1,0 +1,88 @@
+<html>
+<head><title></title>
+<link rel="stylesheet" type="text/css" href="desk.css">
+<script type="text/javascript" src="desk.js"></script>
+</head>
+<body onload="showLoading()"><div id="screen">
+<div id="loadingScreen">
+</div>
+<div id="gallery">
+	<div id="gallery-top">
+		<div id="hide-gallery" onclick="hide_gallery()"></div>
+	</div>
+	<div id="gallery-content">
+		<div id="images">
+			<img src="gallery/image1.jpg" class="galimg" id="opt1" onmouseover="showlarge(1)">
+			<img src="gallery/image2.jpg" class="galimg" id="opt2" onmouseover="showlarge(2)">
+			<img src="gallery/image3.jpg" class="galimg" id="opt3" onmouseover="showlarge(3)">
+			<img src="gallery/image4.jpg" class="galimg" id="opt4" onmouseover="showlarge(4)">
+			<img src="gallery/image5.jpg" class="galimg" id="opt5" onmouseover="showlarge(5)">
+			<img src="gallery/image6.jpg" class="galimg" id="opt6" onmouseover="showlarge(6)">
+			<img src="gallery/image7.jpg" class="galimg" id="opt7" onmouseover="showlarge(7)">
+		</div>
+		<div id="sub-images">
+		<div id="larger-image">
+			<img id="image1" src="gallery/image1.jpg" class="large-image">		
+			<img src="gallery/image2.jpg" id="image2" class="large-image">
+			<img src="gallery/image3.jpg" id="image3" class="large-image">
+			<img src="gallery/image4.jpg" id="image4" class="large-image">
+			<img src="gallery/image5.jpg" id="image5" class="large-image">
+			<img src="gallery/image6.jpg" id="image6" class="large-image">
+			<img src="gallery/image7.jpg" id="image7" class="large-image">
+		</div>
+		</div>
+	</div>
+</div>
+<fieldset id="calc">
+	<div id="closeCalc" onclick="hideCalc()"></div>
+		<input type="text" id="displayBoard" placeholder="-------Calculator-------" readonly>
+
+		<div id="numPad">
+			
+		<input type="submit" id="num1" value="1" class="numButt" onclick="display(1)">
+		<input type="submit" id="num2" value="2" class="numButt" onclick="display(2)">
+		<input type="submit" id="num3" value="3" class="numButt"  onclick="display(3)">
+		<input type="submit" id="num4" value="4" class="numButt"  onclick="display(4)">
+		<input type="submit" id="num5" value="5" class="numButt"  onclick="display(5)">
+		<input type="submit" id="num6" value="6" class="numButt"  onclick="display(6)">
+		<input type="submit" id="num7" value="7" class="numButt"  onclick="display(7)">
+		<input type="submit" id="num8" value="8" class="numButt"  onclick="display(8)">
+		<input type="submit" id="num9" value="9" class="numButt"  onclick="display(9)">
+		<input type="submit" id="num0" value="0" class="dobButt"  onclick="display(0)">
+		<input type="submit" id="num11" value="AC" class="numButt"  onclick="display(11)">
+		</div>
+		<div id="actionPad">
+			
+		<input type="submit" id="add_Num" value="+" class="numButt"  onclick="blink(99)">
+		<input type="submit" id="sub_Num" value="-" class="numButt"  onclick="blink(98)">
+		<input type="submit" id="mul_Num" value="*" class="numButt"  onclick="blink(96)">
+		<input type="submit" id="div_Num" value="/" class="numButt"  onclick="blink(95)">
+		<input type="submit" id="eq_Num" value="=" class="dobButt"  onclick="blink(97)">
+		<input type="submit" id="ce_Num" value="C" class="dobButt"  onclick="blink(94)">
+
+		</div>
+
+</fieldset>
+
+
+<div id="text-edit">
+<div id="text-editor-top">
+	<input type="submit" id="close-text-editor" value="" onclick="hide_text_editor()">
+</div>
+<textarea id="text-editor"></textarea>
+</div>
+	<div id="start-menu" onmouseleave="hide_startmenu()">
+		<div id="start-top"></div>
+		<ul>
+			<b><a href="#"><li onclick="show_gallery()">Gallery</li></a>
+			<a href="#"><li onclick="show_calc()">Calculator</li></a>
+			<a href="#"><li onclick="show_text_editor()">Text Editor</li></a></b>
+		</ul>
+		<div id="start-bottom"></div>
+	</div>
+	<div id="bottom-bar">
+		<div id="start-button" onclick="display_startmenu()"></div>
+	</div>
+</div>
+</body>
+</html>
